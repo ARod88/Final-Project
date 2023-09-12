@@ -3,8 +3,7 @@ import About from './components/About'
 import Gallery from './components/Gallery'
 import './App.css';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
-import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container'
+import NavBar from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
@@ -16,8 +15,9 @@ function App() {
     <div className="App">
          <Router>
         <header>
-          <h1 className="title">Welcome to custom Rugz</h1>
-          <Container>
+        
+          <NavBar/>
+          {/* <Container>
             <Nav defaultActiveKey="/" variant="tabs" fill>
               <Nav.Item>
                 <Link to="/">
@@ -41,13 +41,13 @@ function App() {
                 </Link>
               </Nav.Item>
             </Nav>
-          </Container>
+          </Container> */}
         </header>
         <div className="display">
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/about" element={<About />}/>
-            <Route path="/gallery" element={<gallery packages={Gallery} />}/>
+            <Route path="/gallery" element={<Gallery packages={Gallery} />}/>
           </Routes>
         </div>
       </Router>

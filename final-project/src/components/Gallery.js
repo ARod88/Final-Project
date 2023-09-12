@@ -1,16 +1,31 @@
+import React from 'react';
+import GalleryProduct from './GalleryProduct';
 
 function Gallery () {
-    return(
-        <div className="homepage">
-            <h1>Visit our resort and change your life!</h1>
 
-            <h1>Grand opening in StressVille, Texas</h1>
-            
-            <h1>Check out our wide array of packages and offers!</h1>
 
+    
+    return (
+        <div className="responsive">
+          <div className="gallery">
+            {images.map((image, index) => (
+              <div key={index} className="gallery-item">
+                <a target="_blank" href={image.src}>
+                  <img src={image.src} alt={image.alt} />
+                </a>
+                <div className="desc">
+                  {image.description}
+                  <br />
+                  Price: {image.price}
+                  <br />
+                  
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-    )
+      );
+    }
 
-}
 
 export default Gallery
