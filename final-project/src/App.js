@@ -1,60 +1,33 @@
-import Home from './components/Home'
-import About from './components/About'
-import Gallery from './components/Gallery'
 import './App.css';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
-import NavBar from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.min.css"
+// import Home from './components/Home'
+// import About from './components/About'
+// import Gallery from './components/Gallery'
+// import ContactUs from './components/ContactUs';
+import NavBar from './components/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
-
-
+// import CurrentUserProvider from './components/contexts/CurrentUser'
 
 function App() {
   return (
-    <div className="App">
-         <Router>
-        <header>
+    <div className='App'>
+      <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<h1>Home</h1>}/>
+        <Route path='/about' element={<h1>About</h1>}/>
+        <Route path='/gallery' element={<h1>Gallery</h1>}/>
+        <Route path='/product' element={<h1>Gallery Product</h1>}/>
+        <Route path='/contact'element={<h1>Contact Us</h1>}/>
+        <Route path='/logout' element={<h1>Logout</h1>}/>
+        <Route path='/profile' element={<h1>Profile</h1>}/>
         
-          <NavBar/>
-          {/* <Container>
-            <Nav defaultActiveKey="/" variant="tabs" fill>
-              <Nav.Item>
-                <Link to="/">
-                  <Nav.Link href="/">
-                    Home 
-                  </Nav.Link>
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link to="/about">
-                  <Nav.Link href="/about" eventKey={"aboutPage"}>
-                    About Us
-                  </Nav.Link>
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link to="/Gallery">
-                  <Nav.Link href="/gallery" eventKey={"galleryPage"}>
-                    Rug Gallery
-                  </Nav.Link>
-                </Link>
-              </Nav.Item>
-            </Nav>
-          </Container> */}
-        </header>
-        <div className="display">
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/gallery" element={<Gallery packages={Gallery} />}/>
-          </Routes>
-        </div>
-      </Router>
-
+      </Routes>
       
-     
+      </BrowserRouter>
     </div>
+    
   );
 }
 

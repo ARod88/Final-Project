@@ -1,29 +1,22 @@
-import React from 'react';
-import GalleryProduct from './GalleryProduct';
+import React, { useEffect, useState } from 'react';
+import GalleryImages from './galleryImages';
 
 function Gallery () {
+  const [rugs, setRugs] = useState([]);
 
-
-    
+    useEffect(() => {
+    fetch('/api/rugs')
+    .then((response) => response.json())
+    // .then((datat) => setRugs(data.rugs))
+    .catch((error) => console.error('Error fetching data:', error));
+  }, []);
     return (
         <div className="responsive">
           <div className="gallery">
-            {images.map((image, index) => (
-              <div key={index} className="gallery-item">
-                <a target="_blank" href={image.src}>
-                  <img src={image.src} alt={image.alt} />
-                </a>
-                <div className="desc">
-                  {image.description}
-                  <br />
-                  Price: {image.price}
-                  <br />
-                  
-                </div>
-              </div>
-            ))}
-          </div>
+            <GalleryImages  />
+       
         </div>
+         </div>
       );
     }
 
