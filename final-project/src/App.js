@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 // import ContactUs from './components/ContactUs';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer';
 
 // import CurrentUserProvider from './components/contexts/CurrentUser'
 
@@ -22,10 +23,10 @@ function App() {
         <Route path='/contact'element={<h1>Contact Us</h1>}/>
         <Route path='/logout' element={<h1>Logout</h1>}/>
         <Route path='/profile' element={<h1>Profile</h1>}/>
-        
       </Routes>
-      
       </BrowserRouter>
+      <Footer />
+      
     </div>
     
   );
