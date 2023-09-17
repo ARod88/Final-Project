@@ -1,14 +1,10 @@
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-// import Home from './components/Home'
-// import About from './components/About'
-// import Gallery from './components/Gallery'
-// import ContactUs from './components/ContactUs';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer';
+import SignUp from './components/SignUp';
 
-// import CurrentUserProvider from './components/contexts/CurrentUser'
+
 
 function App() {
   return (
@@ -23,6 +19,7 @@ function App() {
         <Route path='/contact'element={<h1>Contact Us</h1>}/>
         <Route path='/logout' element={<h1>Logout</h1>}/>
         <Route path='/profile' element={<h1>Profile</h1>}/>
+        <Route path='/signup' element={<SignUp />}/>
       </Routes>
       </BrowserRouter>
       <Footer />

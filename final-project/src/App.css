@@ -15,6 +15,28 @@
   padding: 5px;
 }
 
+.inputBox{
+  padding: 7px;
+  display: block;
+  border: 1px solid black;
+  width: 300px;
+  margin: 20px;
+}
+
+.appButton{
+  margin: 20px;
+  width: 150px;
+  padding: 10px;
+  background: #3f3fb2;
+  border: solid 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.register {
+  margin-left: 30%;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
