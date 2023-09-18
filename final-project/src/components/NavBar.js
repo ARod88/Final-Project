@@ -11,6 +11,10 @@ const NavBar = () => {
 
     return (
         <div>
+          <img
+          alt="logo"
+          className="logo"
+          src="/Logo.jpg" />
             {auth ? (
                 <ul className="nav-ul">
                     <li>
@@ -28,7 +32,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <Link onClick={logout} to="/signup">
-                            Logout
+                            Logout ({ JSON.parse(auth).name})
                         </Link>
                     </li>
                 </ul>
