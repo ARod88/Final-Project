@@ -33,8 +33,17 @@
   color: white;
 }
 
+.nav-right{
+  text-align: right;
+}
+
 .register {
   margin-left: 30%;
+}
+
+.login{
+  margin-left: 30%;
+  margin-top: 100px;
 }
 
 .footer {

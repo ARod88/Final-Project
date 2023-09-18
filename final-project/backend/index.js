@@ -1,6 +1,6 @@
 const express = require('express');
-require('./db/config')
 const cors = require('cors');
+require('./db/config')
 // const bodyParser = require('body-parser');
 const User = require('./db/User');
 const app = express();
@@ -12,8 +12,24 @@ app.use(cors())
 app.post("/register", async (req, res) => {
     let user = new User(req.body);
     let result =  await user.save();
-    res.send(req.body)
+    result = result.toObject();
+    delete result.password
+    res.send(result);
 })
+
+app.post('/login', async (req, res) => {
+    if (req.body.password && req.body.email) {
+      let user = await User.findOne({ email: req.body.email }).select('-password');
+      if (user) {
+        res.send(user);
+      } else {
+        res.send({ 'result': 'No user found' });
+      }
+    } else {
+      res.send({ 'result': 'Missing email or password' });
+    }
+  });
+  
 
 app.listen(5000)
 

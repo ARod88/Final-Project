@@ -6,6 +6,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import LoggedUser from './components/LoggedUser';
+import Login from './components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,8 +26,11 @@ function App() {
         <Route path='/contact'element={<h1>Contact Us</h1>}/>
         <Route path='/logout' element={<h1>Logout</h1>}/>
         <Route path='/profile' element={<h1>Profile</h1>}/>
-        <Route path='/signup' element={<SignUp />}/>
+        
         </Route>
+        <Route path='/signup' element={<SignUp />}/>
+        <Route path='/login' element={<Login />}/>
+
       </Routes>
       </BrowserRouter>
       <Footer />
