@@ -1,8 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About';
 import Footer from './components/Footer';
 import SignUp from './components/SignUp';
+import LoggedUser from './components/LoggedUser';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -12,14 +17,16 @@ function App() {
       <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path='/' element={<h1>Home</h1>}/>
-        <Route path='/about' element={<h1>About</h1>}/>
+        <Route element={<LoggedUser/>}>
+        <Route path='/' element={<Home />}/>
+        <Route path='/about' element={<About />}/>
         <Route path='/gallery' element={<h1>Gallery</h1>}/>
         <Route path='/product' element={<h1>Gallery Product</h1>}/>
         <Route path='/contact'element={<h1>Contact Us</h1>}/>
         <Route path='/logout' element={<h1>Logout</h1>}/>
         <Route path='/profile' element={<h1>Profile</h1>}/>
         <Route path='/signup' element={<SignUp />}/>
+        </Route>
       </Routes>
       </BrowserRouter>
       <Footer />

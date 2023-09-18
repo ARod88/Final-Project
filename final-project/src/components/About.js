@@ -1,8 +1,9 @@
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 
-export default function About () {
-    return (
+const About = () => {
+    return(
+
         <Container className="aboutpage">
             <Container>
                 <h1>The Artist</h1>
@@ -26,6 +27,8 @@ export default function About () {
                 </Card.Body>
             </Card>
         </Container>
+
     )
 }
 
+export default About
