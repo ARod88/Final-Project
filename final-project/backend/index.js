@@ -3,6 +3,7 @@ const cors = require('cors');
 require('./db/config')
 // const bodyParser = require('body-parser');
 const User = require('./db/User');
+const Products = require('./db/Products')
 const app = express();
 
 //middleware
@@ -29,6 +30,17 @@ app.post('/login', async (req, res) => {
       res.send({ 'result': 'Missing email or password' });
     }
   });
+
+  app.post("/add-product", async (req, res) => {
+    let product = new Products(req.body); // Fixed the typo here
+    try {
+      let result = await product.save();
+      res.send(result);
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  });
+  
   
 
 app.listen(5000)
