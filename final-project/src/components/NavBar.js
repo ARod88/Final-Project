@@ -39,7 +39,7 @@ const NavBar = () => {
                   </li>
 
                   <li>
-                      <Link to="/profile">Profile</Link>
+                      <Link to="/contact">ContactUs</Link>
                   </li>
                   <li>
                       <Link onClick={logout} to="/signup">

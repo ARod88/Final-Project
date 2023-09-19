@@ -17,6 +17,12 @@ const productList = [
     price: 100,
     imageUrl: "/public/images/viking.jpg",
   },
+  {
+    name: "Dodger Rug",
+    description: "Dodger",
+    price: 100,
+    imageUrl: "/public/images/dodger.jpg",
+  },
   // Add more product objects as needed
 ];
 
