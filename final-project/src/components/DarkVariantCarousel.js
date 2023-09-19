@@ -7,7 +7,7 @@ function DarkVariantExample() {
         <div className='d-flex align-items-center justify-content-center'>
         <img
           className="d-block w-100"
-          src="http://placekitten.com/200/300"
+          src="/toadrug.jpg"
           alt="First slide"
           style={{ maxWidth: '400px', maxHeight:'400px'}}
         />
@@ -18,22 +18,28 @@ function DarkVariantExample() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=eee"
-          alt="Second slide"
-        />
+      <div className='d-flex align-items-center justify-content-center'>
+    <img
+      className="d-block w-100"
+      src="/viking.jpg"
+      alt="Second slide"
+      style={{ maxWidth: '400px', maxHeight: '400px' }}
+    />
+  </div>
         <Carousel.Caption>
           <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=e5e5e5"
-          alt="Third slide"
-        />
+      <div className='d-flex align-items-center justify-content-center'>
+    <img
+      className="d-block w-100"
+      src="/dodger.jpg"
+      alt="Third slide"
+      style={{ maxWidth: '400px', maxHeight: '400px' }}
+    />
+  </div>
         <Carousel.Caption>
           <h5>Third slide label</h5>
           <p>

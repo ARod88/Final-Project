@@ -5,10 +5,16 @@ require('./config')
 const User = require('./models/User');
 const Product = require('./models/Product')
 const app = express();
+const path = require('path');
 
 //middleware
 app.use(express.json());
 app.use(cors())
+
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+//register new user
 
 app.post("/register", async (req, res) => {
     let user = new User(req.body);
@@ -17,6 +23,8 @@ app.post("/register", async (req, res) => {
     delete result.password
     res.send(result);
 })
+
+//login a user
 
 app.post('/login', async (req, res) => {
     if (req.body.password && req.body.email) {
@@ -31,14 +39,26 @@ app.post('/login', async (req, res) => {
     }
   });
 
-  app.post("/Gallery", async (req, res) => {
+
+
+  app.get('/api/products', async (req, res) => {
     try {
-      const product = new product(req.body); // Assuming req.body contains product data
-      const result = await product.find();
-      res.send(result);
+      const products = await Product.find();
+      res.json(products);
     } catch (error) {
       console.error(error);
-      res.status(500).send(error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  });
+
+  app.post('/api/products', async (req, res) => {
+    try {
+      const newProduct = new Product(req.body); // Assuming req.body contains product data
+      const savedProduct = await newProduct.save();
+      res.status(201).json(savedProduct);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
     }
   });
   

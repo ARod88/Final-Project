@@ -37,6 +37,16 @@
   text-align: right;
 }
 
+.navbar-home{
+  float: left;
+  margin: 13px;
+  
+}
+.navbar-home a{
+ 
+  text-decoration: none;
+}
+
 .logo {
   width: 45px;
   height: 45px;

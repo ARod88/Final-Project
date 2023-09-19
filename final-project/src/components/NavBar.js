@@ -10,21 +10,27 @@ const NavBar = () => {
     };
 
     return (
-        <div>
-          <img
-          alt="logo"
-          className="logo"
-          src="/Logo.jpg" />
+        <div >
+            <img alt="logo" className="logo" src="/Logo.jpg" />
+
+            <ul className="navbar-home">
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+            </ul>
+
+            
+
             {auth ? (
                 <ul className="nav-ul">
-                    <li>
+                    {/* <li>
                         <Link to="/">Home</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="/gallery">Gallery</Link>
+                        <Link to="/api/products">Gallery</Link>
                     </li>
 
                     <li>
@@ -32,7 +38,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <Link onClick={logout} to="/signup">
-                            Logout ({ JSON.parse(auth).name})
+                            Logout ({JSON.parse(auth).name})
                         </Link>
                     </li>
                 </ul>
