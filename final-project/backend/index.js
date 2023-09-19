@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-require('./db/config')
+require('./config')
 // const bodyParser = require('body-parser');
-const User = require('./db/User');
-const Products = require('./db/Products')
+const User = require('./models/User');
+const Product = require('./models/Product')
 const app = express();
 
 //middleware
@@ -31,15 +31,27 @@ app.post('/login', async (req, res) => {
     }
   });
 
-  app.post("/add-product", async (req, res) => {
-    let product = new Products(req.body); // Fixed the typo here
+  app.post("/Gallery", async (req, res) => {
     try {
-      let result = await product.save();
+      const product = new product(req.body); // Assuming req.body contains product data
+      const result = await product.find();
       res.send(result);
     } catch (error) {
+      console.error(error);
       res.status(500).send(error);
     }
   });
+  
+
+//   app.get('/api/product', async (req, res) => {
+//     try {
+//       const products = await Products.find(); // Fetch all products from the database
+//       res.json(products);
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ message: 'Server error' });
+//     }
+//   });
   
   
 
