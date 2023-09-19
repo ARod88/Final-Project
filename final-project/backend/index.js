@@ -5,7 +5,7 @@ require('./config')
 const User = require('./models/User');
 const Product = require('./models/Product')
 const app = express();
-const path = require('path');
+const path = require('path')
 
 //middleware
 app.use(express.json());

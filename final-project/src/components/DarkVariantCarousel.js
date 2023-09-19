@@ -7,7 +7,7 @@ function DarkVariantExample() {
         <div className='d-flex align-items-center justify-content-center'>
         <img
           className="d-block w-100"
-          src="/toadrug.jpg"
+          src="./images/toadrug.jpg"
           alt="First slide"
           style={{ maxWidth: '400px', maxHeight:'400px'}}
         />
@@ -21,7 +21,7 @@ function DarkVariantExample() {
       <div className='d-flex align-items-center justify-content-center'>
     <img
       className="d-block w-100"
-      src="/viking.jpg"
+      src="./images/viking.jpg"
       alt="Second slide"
       style={{ maxWidth: '400px', maxHeight: '400px' }}
     />
@@ -35,7 +35,7 @@ function DarkVariantExample() {
       <div className='d-flex align-items-center justify-content-center'>
     <img
       className="d-block w-100"
-      src="/dodger.jpg"
+      src="./images/dodger.jpg"
       alt="Third slide"
       style={{ maxWidth: '400px', maxHeight: '400px' }}
     />

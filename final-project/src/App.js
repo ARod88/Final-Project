@@ -21,9 +21,9 @@ function App() {
           <Route
             path='/api/products'
             element={
-              <LoggedUser>
+              
                 <Gallery />
-              </LoggedUser>
+              
             }
           />
           <Route path='/contact' element={<h1>Contact Us</h1>} />

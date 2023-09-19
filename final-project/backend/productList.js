@@ -9,13 +9,13 @@ const productList = [
     name: "Toad Rug",
     description: "Custom Toad Rug",
     price: 100,
-    imageUrl: "/public/toadrug.jpg",
+    imageUrl: "/public/images/toad.jpg",
   },
   {
     name: "Viking Rug",
     description: "Custom Viking",
     price: 100,
-    imageUrl: "./public/viking.jpg",
+    imageUrl: "/public/images/viking.jpg",
   },
   // Add more product objects as needed
 ];
