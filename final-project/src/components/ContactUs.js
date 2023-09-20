@@ -8,7 +8,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission logic here (e.g., send a request to the server)
+    //  form submission logic here (e.g., send a request to the server)
 
     // After successful submission, set isMessageSent to true
     setMessageSent(true);

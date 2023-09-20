@@ -1,5 +1,11 @@
 
+/* .App{
+  font-family: 'Rubik 80s Fade', cursive;
+} */
 
+.caption{
+  color: white;
+}
 
 .nav-ul {
   padding: 5px;
@@ -10,6 +16,7 @@
 .nav-ul li {
   display: inline-block;
   padding: 10px;
+  font-family: 'Rubik 80s Fade', cursive;
 }
 
 .nav-ul li a {
@@ -46,7 +53,8 @@
   
 }
 .navbar-home a{
- 
+  
+  font-family: 'Rubik 80s Fade', cursive;
   text-decoration: none;
 }
 
