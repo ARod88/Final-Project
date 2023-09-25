@@ -8,9 +8,9 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    //  form submission logic here (e.g., send a request to the server)
+    //  form submission request to the server)
 
-    // After successful submission, set isMessageSent to true
+   
     setMessageSent(true);
 
     // Reset the form (optional)
@@ -18,10 +18,10 @@ const ContactUs = () => {
   };
 
   return (
-    <Container>
+    <Container className="contact">
       <Row className="mb-5 mt-3">
         <Col lg={8}>
-          <h1 className="display-4 mb-4">
+          <h1 className="contactme display-4 mb-4">
             Contact Me
           </h1>
         </Col>

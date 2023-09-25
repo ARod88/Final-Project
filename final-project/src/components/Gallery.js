@@ -17,7 +17,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className='gallery'>
+    <div className='gallery  style={{ backgroundImage: `url(${blackandwhite})`}}'>
       {products.map((product) => (
         <div key={product._id} className='product-card'>
           <img src={product.imageUrl} alt={product.name} />

@@ -1,10 +1,111 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
 
-/* .App{
-  font-family: 'Rubik 80s Fade', cursive;
-} */
+.App {
+  height: 100%;
+  background-image: url('./components/images/blackandwhite.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(168, 168, 179);
+}
+.artist{
+  color: black;
+  font-family: 'Skranji', cursive;
+}
+
+.aboutpage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  width: 75%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-card {
+  width: 100%;
+}
+
+.about-card img {
+  width: 100%;
+}
+
+
+
+.title{
+  font-family: 'Skranji', cursive;
+  text-align: center;
+  color: rgb(168, 168, 179);
+  padding: 40px;
+  text-shadow: 4px 4px 2px black;
+  
+}
+
+.checkout {
+  font-family: 'Skranji', cursive;
+  text-align: center;
+  margin: 10px;
+  font-size: 2em;
+  color: rgb(168, 168, 179);
+  text-shadow: 4px 4px 2px black;
+  animation: slide 2s infinite; 
+  
+  
+}
+
+
+/* Define the keyframes animation */
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+/* Apply the animation to an element */
+.slide-element {
+  animation: slide 2s infinite;
+}
+
+
+.contact {
+  font-family: 'Skranji', cursive;
+  color: white;
+  background-color: black;
+  opacity: 0.8; 
+  height: 80%;
+  
+}
+
+.contactme{
+  padding: 20px;
+}
 
 .caption{
   color: white;
+  margin-top: 20%;
+  font-family: 'Skranji', cursive;
+  background-color: black;
+  width: fit-content;
+  margin-left: 43%;
+  margin-bottom: 2%;
+}
+
+.captiontitle{
+  color: white;
+  font-family: 'Skranji', cursive;
+  
+  margin-bottom: 28%;
 }
 
 .nav-ul {
@@ -16,11 +117,12 @@
 .nav-ul li {
   display: inline-block;
   padding: 10px;
-  font-family: 'Rubik 80s Fade', cursive;
+  font-family: 'Skranji', cursive;
+
 }
 
 .nav-ul li a {
-  color:blue;
+  color: rgb(224, 212, 212);
   text-decoration: none;
   padding: 5px;
 }
@@ -28,7 +130,7 @@
 .inputBox{
   padding: 7px;
   display: block;
-  border: 1px solid black;
+  border: 1px solid rgb(168, 168, 179);
   width: 300px;
   margin: 20px;
 }
@@ -54,7 +156,7 @@
 }
 .navbar-home a{
   
-  font-family: 'Rubik 80s Fade', cursive;
+  font-family: 'Skranji', cursive;
   text-decoration: none;
 }
 
@@ -82,7 +184,7 @@
   
   background-color: white;
   border-radius: 0 !important;
-  border: 1px solid blue
+  border: 1px solid rgb(5, 5, 5)
 }
 
 .contact___form input.form-control{
@@ -108,7 +210,7 @@ padding: 5px 16px 5px 16px;
   position: absolute;
   bottom: 0;
   background: black;
-  color: blue;
+  color: rgb(168, 168, 179);
   width: 100%;
   text-align: center;
   padding: 10px;

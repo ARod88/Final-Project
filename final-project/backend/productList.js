@@ -23,7 +23,9 @@ const productList = [
     price: 100,
     imageUrl: "/public/images/dodger.jpg",
   },
-  // Add more product objects as needed
+  
+
+  
 ];
 
 // Connect to MongoDB

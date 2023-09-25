@@ -9,10 +9,12 @@ import ContactUs from './components/ContactUs';
 import Login from './components/Login';
 import Gallery from './components/Gallery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import blackandwhite from './components/images/blackandwhite.jpg';
+
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App' style={{ backgroundImage: `url(${blackandwhite})`}}>
       <BrowserRouter>
         <NavBar />
         <Routes>
